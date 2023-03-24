@@ -10,5 +10,6 @@ body {
 }
 h3 {
     color: white;
-    align-content: center;
+    text-align: center;
+    font-size: 4rem;
 }

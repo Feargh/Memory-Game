@@ -105,7 +105,7 @@ function checkMatch() {
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
         alert('Sorry try again!')
     }
-    resultDisplay.textContent = cardsWon.length
+    resultDisplay.textContent = 'Score: ' + cardsWon.length
     cardsChosen = []
     cardsChosenIds = []
 

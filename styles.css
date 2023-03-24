@@ -1,9 +1,14 @@
 body {
-    padding: 50px;
+    background-color: navy;
 }
 #grid {
     width: 400px;
     height: 300px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0px auto;
+}
+h3 {
+    color: white;
+    align-content: center;
 }

@@ -1,10 +1,34 @@
 const cardArray = [
     {
-        name: 'fries',
+        name: 'powells',
         img: 'images/S+O.jpg',
     },
     {
-        name: 'cheeseburger',
+        name: 'kavanaghs',
+        img: 'images/B+A.jpg',
+    },
+    {
+        name: 'hotdog',
+        img: 'images/hotdog.png',
+    },
+    {
+        name: 'ice-cream',
+        img: 'images/ice-cream.png',
+    },
+    {
+        name: 'milkshake',
+        img: 'images/milkshake.png',
+    },
+    {
+        name: 'pizza',
+        img: 'images/pizza.png',
+    },
+    {
+        name: 'powells',
+        img: 'images/S+O.jpg',
+    },
+    {
+        name: 'kavanaghs',
         img: 'images/B+A.jpg',
     },
     {
@@ -25,27 +49,19 @@ const cardArray = [
     },
     {
         name: 'fries',
-        img: 'images/S+O.jpg',
+        img: 'images/fries.png',
+    },
+    {
+        name: 'fries',
+        img: 'images/fries.png',
     },
     {
         name: 'cheeseburger',
-        img: 'images/B+A.jpg',
+        img: 'images/cheeseburger.png',
     },
     {
-        name: 'hotdog',
-        img: 'images/hotdog.png',
-    },
-    {
-        name: 'ice-cream',
-        img: 'images/ice-cream.png',
-    },
-    {
-        name: 'milkshake',
-        img: 'images/milkshake.png',
-    },
-    {
-        name: 'pizza',
-        img: 'images/pizza.png',
+        name: 'cheeseburger',
+        img: 'images/cheeseburger.png',
     }
 ]
 cardArray.sort(() => 0.5 - Math.random());

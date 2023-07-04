@@ -2,8 +2,8 @@ body {
     background-color: navy;
 }
 #grid {
-    width: 400px;
-    height: 300px;
+    width: 80vh;
+    height: 60vh;
     display: flex;
     flex-wrap: wrap;
     margin: 0px auto;

@@ -121,7 +121,7 @@ function flipCard() {
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenIds.push(cardId)
     this.setAttribute('src', cardArray[cardId].img) //Add the image to the fliped card
-    this.setAttribute('class', 'flip')  //Add flip class for animation
+    this.classList.add('flip')  //Add flip class for animation
 
     //Reset unmatched cards after timeout
     if (cardsChosen.length === 2) {

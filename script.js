@@ -87,23 +87,25 @@ function checkMatch() {
     const cards = document.querySelectorAll('#grid img')
     const optionOneId = cardsChosenIds[0]
     const optionTwoId = cardsChosenIds[1]
-    console.log('check for a match!')
+    // console.log('check for a match!')
     if (optionOneId == optionTwoId) {
         cards[optionOneId].setAttribute('src', 'images/blank.png')
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
         alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
-        alert('You found a match!')
-        cards[optionOneId].setAttribute('src', 'images/navy.png')
-        cards[optionTwoId].setAttribute('src', 'images/navy.png')
+        // alert('You found a match!')
+        //Commented out the function that will make the card disappear after being matched
+        // cards[optionOneId].setAttribute('src', 'images/navy.png')
+        // cards[optionTwoId].setAttribute('src', 'images/navy.png')
         cards[optionOneId].removeEventListener('click', flipCard)
         cards[optionTwoId].removeEventListener('click', flipCard)
         cardsWon.push(cardsChosen)
     } else {
         cards[optionOneId].setAttribute('src', 'images/blank.png')
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
-        alert('Sorry try again!')
+        
+        // alert('Sorry try again!')
     }
     resultDisplay.textContent = 'Score: ' + cardsWon.length
     cardsChosen = []
@@ -115,12 +117,12 @@ function checkMatch() {
 }
 
 function flipCard() {
-    console.log(cardArray)
+    // console.log(cardArray)
     const cardId = this.getAttribute('data-id')
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenIds.push(cardId)
-    console.log('clicked', cardId)
-    console.log(cardsChosen)
+    // console.log('clicked', cardId)
+    // console.log(cardsChosen)
     this.setAttribute('src', cardArray[cardId].img)
     if (cardsChosen.length === 2) {
         setTimeout( checkMatch, 500)

@@ -117,14 +117,18 @@ function checkMatch() {
 }
 
 function flipCard() {
-    // console.log(cardArray)
     const cardId = this.getAttribute('data-id')
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenIds.push(cardId)
-    // console.log('clicked', cardId)
-    // console.log(cardsChosen)
-    this.setAttribute('src', cardArray[cardId].img)
+    this.setAttribute('src', cardArray[cardId].img) //Add the image to the fliped card
+    this.setAttribute('class', 'flip')  //Add flip class for animation
+
+    //Reset unmatched cards after timeout
     if (cardsChosen.length === 2) {
-        setTimeout( checkMatch, 500)
+        const cards = document.querySelectorAll('#grid img')
+        setTimeout(() => {
+            checkMatch();
+            cards.forEach(card => card.classList.remove('flip'));
+    }, 750);
     }
 }

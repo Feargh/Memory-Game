@@ -48,20 +48,20 @@ const cardArray = [
         img: 'images/pizza.png',
     },
     {
-        name: 'fries',
-        img: 'images/fries.png',
+        name: 'Ben',
+        img: 'images/Ben.jpg',
     },
     {
-        name: 'fries',
-        img: 'images/fries.png',
+        name: 'Ben',
+        img: 'images/Ben.jpg',
     },
     {
-        name: 'cheeseburger',
-        img: 'images/cheeseburger.png',
+        name: 'Orla',
+        img: 'images/Orla.jpg',
     },
     {
-        name: 'cheeseburger',
-        img: 'images/cheeseburger.png',
+        name: 'Orla',
+        img: 'images/Orla.jpg',
     }
 ]
 cardArray.sort(() => 0.5 - Math.random());
@@ -120,8 +120,11 @@ function flipCard() {
     const cardId = this.getAttribute('data-id')
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenIds.push(cardId)
-    this.setAttribute('src', cardArray[cardId].img) //Add the image to the fliped card
-    this.classList.add('flip')  //Add flip class for animation
+    this.classList.add('flip', 'flipped')  //Add flip class for animation
+    setTimeout(() => {
+        this.setAttribute('src', cardArray[cardId].img)
+        }, 500)         //Add the image to the fliped card with delay 
+    
 
     //Reset unmatched cards after timeout
     if (cardsChosen.length === 2) {
@@ -129,6 +132,6 @@ function flipCard() {
         setTimeout(() => {
             checkMatch();
             cards.forEach(card => card.classList.remove('flip'));
-    }, 750);
+            }, 1000);
     }
 }

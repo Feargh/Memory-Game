@@ -2,8 +2,9 @@ body {
     background-color: navy;
 }
 #grid {
-    width: 80vh;
-    height: 60vh;
+    /* 400px by 300px */
+    width: 400px;        
+    height: 300px;
     display: flex;
     flex-wrap: wrap;
     margin: 0px auto;
@@ -14,6 +15,7 @@ h3 {
     font-size: 4rem;
 }
 .flip {
+    /* width: 20vh; */
     transition: transform 0.5s;
     transform-style: preserve-3d;
     transform: rotateY(180deg);

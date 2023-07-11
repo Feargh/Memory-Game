@@ -94,6 +94,7 @@ function checkMatch() {
         alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
+        resultDisplay.textContent = 'You found a match!'
         // alert('You found a match!')
         //Commented out the function that will make the card disappear after being matched
         // cards[optionOneId].setAttribute('src', 'images/navy.png')
@@ -102,17 +103,23 @@ function checkMatch() {
         cards[optionTwoId].removeEventListener('click', flipCard)
         cardsWon.push(cardsChosen)
     } else {
+        resultDisplay.textContent = 'Sorry try again!'
         cards[optionOneId].setAttribute('src', 'images/blank.png')
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
-        
         // alert('Sorry try again!')
     }
-    resultDisplay.textContent = 'Score: ' + cardsWon.length
+
     cardsChosen = []
     cardsChosenIds = []
 
+//Score display
     if (cardsWon.length == (cardArray.length/2)) {
             resultDisplay.innerHTML = 'Congratulations you found them all!'
+    } else {
+        //Display score after a delay (so promts can be shown)
+        setTimeout(() => {
+        resultDisplay.textContent = 'Score: ' + cardsWon.length
+        }, 750)
     }
 }
 

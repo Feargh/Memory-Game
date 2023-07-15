@@ -133,11 +133,11 @@ const dinoArray = [
 cardArray.sort(() => 0.5 - Math.random());
 
 const gridDisplay = document.querySelector('#grid');
-const resultDisplay = document.querySelector('#result')
-const button = document.getElementById('button-family')
-let cardsChosen = []
-let cardsChosenIds = []
-const cardsWon = []
+const resultDisplay = document.querySelector('#result');
+const button = document.getElementById('button-family');
+let cardsChosen = [];
+let cardsChosenIds = [];
+const cardsWon = [];
 
 function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
@@ -155,7 +155,8 @@ function checkMatch() {
     const optionOneId = cardsChosenIds[0]
     const optionTwoId = cardsChosenIds[1]
     // console.log('check for a match!')
-    if (optionOneId == optionTwoId) {
+
+    if (optionOneId === optionTwoId) {
         cards[optionOneId].setAttribute('src', 'images/blank.png')
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
         alert('You have clicked the same image!')
@@ -180,7 +181,7 @@ function checkMatch() {
     cardsChosenIds = []
 
 //Score display
-    if (cardsWon.length == (cardArray.length/2)) {
+    if (cardsWon.length === (cardArray.length / 2)) {
             resultDisplay.innerHTML = 'Congratulations you found them all!'
     } else {
         //Display score after a delay (so promts can be shown)
@@ -191,21 +192,25 @@ function checkMatch() {
 }
 
 function flipCard() {
-    const cardId = this.getAttribute('data-id')
-    cardsChosen.push(cardArray[cardId].name)
-    cardsChosenIds.push(cardId)
-    this.classList.add('flip', 'flipped')  //Add flip class for animation
+    const cardId = this.getAttribute('data-id');
+    cardsChosen.push(cardArray[cardId].name);
+    cardsChosenIds.push(cardId);
+    this.classList.add('flip', 'flipped');  //Add flip class for animation
+    this.removeEventListener('click', flipCard);
+
     setTimeout(() => {
-        this.setAttribute('src', cardArray[cardId].img)
-        }, 500)         //Add the image to the fliped card with delay 
+        this.setAttribute('src', cardArray[cardId].img);
+                 //Add the image to the fliped card with delay 
     
 
     //Reset unmatched cards after timeout
     if (cardsChosen.length === 2) {
-        const cards = document.querySelectorAll('#grid img')
+        const cards = document.querySelectorAll('#grid img');
         setTimeout(() => {
             checkMatch();
-            cards.forEach(card => card.classList.remove('flip'));
+            cards.forEach((card) => card.classList.remove('flip'));
+            cards.forEach((card) => card.addEventListener('click', flipCard));
             }, 1000);
     }
+}, 500);
 }

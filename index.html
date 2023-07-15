@@ -9,19 +9,18 @@
     <link rel="icon" href="images/mFavicon.ico">
 </head>
 <body>
+    <div id="startScreen" style="display:block">
+        Memory Game
+        <button onclick="startGame()">Let's play</button>
+        <img src="images/startBackground.png" alt="background showing two playing cards.">
+    </div>
     <div class="container">
         <div class>
-            <h3 id="result">Pick two cards to start!</h3>
+            <h3 id="result" style="display:none">Pick two cards to start!</h3>
         </div>
         <div>
             <div id="grid"></div>
         </div>
-        <!-- <div> -->
-            <!-- <button id="button-family">Family</button> -->
-            <!-- <button>Dinosaurs</button> -->
-            <!-- <button>Food</button> -->
-        <!-- </div> -->
-
     </div>
     <script src="script.js"></script>
 </body>

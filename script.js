@@ -140,10 +140,9 @@ let cardsChosenIds = [];
 const cardsWon = [];
 
 function startGame() {
- 
     createBoard();
     toggleScreen("startScreen", false);
-    toggleScreen("result", true)
+    toggleScreen("result", true);
 }
 
 function toggleScreen(id, toggle) {
@@ -197,6 +196,7 @@ function checkMatch() {
 //Score display
     if (cardsWon.length === (cardArray.length / 2)) {
             resultDisplay.innerHTML = 'Congratulations you found them all!'
+            stop()
     } else {
         //Display score after a delay (so promts can be shown)
         setTimeout(() => {
@@ -224,7 +224,25 @@ function flipCard() {
             checkMatch();
             cards.forEach((card) => card.classList.remove('flip'));
             cards.forEach((card) => card.addEventListener('click', flipCard));
-            }, 1000);
+            }, 750);
     }
 }, 500);
 }
+
+function stop() {
+    console.log('stop');
+    toggleScreen("result", false);
+    hideBoard();
+    toggleScreen("endScreen", true);
+}
+
+function hideBoard() {
+    const cards = document.querySelectorAll('#grid img');
+    cards.forEach((card) => {
+        card.style.display = 'none';
+    });
+  }
+
+  function reloadWindow() {
+    window.location.reload()
+  }

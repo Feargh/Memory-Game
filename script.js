@@ -139,6 +139,20 @@ let cardsChosen = [];
 let cardsChosenIds = [];
 const cardsWon = [];
 
+function startGame() {
+ 
+    createBoard();
+    toggleScreen("startScreen", false);
+    toggleScreen("result", true)
+}
+
+function toggleScreen(id, toggle) {
+    let element = document.getElementById(id);
+    let display = ( toggle ) ? "block" : "none";
+    element.style.display = display;
+}
+
+
 function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img')
@@ -148,7 +162,7 @@ function createBoard() {
         gridDisplay.appendChild(card)
     }
 }
-createBoard()
+
 
 function checkMatch() {
     const cards = document.querySelectorAll('#grid img')

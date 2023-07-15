@@ -9,12 +9,13 @@ But wanted to make the game my own as I knew my nephew would love to play this g
 * I have used other game tutorials to try and figure out how to add a flip effect. This was not easy as the tutorial I used to add a flip effect had hard coded HTML cards. I figure out how to apply it to the elements created with javascript in my code.
 * I also used another tutorial to add a start page.
 * Created a start page background image with gimp.
+* Added an end screen with a button that uses javascript to reload the page.
 
 ## Ideas to improve further
 * A hint button
 * A wildcard that could change gameplay. It could match any card, cause a row or column to flip to give a hint.
-* An end screen
 * A scorboard
+* New themes
 
-## Youtube video link 
-https://www.youtube.com/watch?v=ec8vSKJuZTk&t=9009s
+## Youtube video link for initial tutorial followed 
+https://www.youtube.com/watch?v=ec8vSKJuZTk&t=1122s

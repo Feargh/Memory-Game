@@ -64,72 +64,7 @@ const cardArray = [
         img: 'images/Orla.jpg',
     }
 ]
-const dinoArray = [
-    {
-        name: 'dino1',
-        img: 'images/Dinos/Dino1.jpg',
-    },
-    {
-        name: 'dino2',
-        img: 'images/Dinos/Dino2.jpg',
-    },
-    {
-        name: 'dino3',
-        img: 'images/Dinos/Dino3.jpg',
-    },
-    {
-        name: 'dino4',
-        img: 'images/Dinos/Dino4.jpg',
-    },
-    {
-        name: 'dino5',
-        img: 'images/Dinos/Dino5.jpg',
-    },
-    {
-        name: 'dino6',
-        img: 'images/Dinos/Dino6.jpg',
-    },
-    {
-        name: 'dino7',
-        img: 'images/Dinos/Dino7.jpg',
-    },
-    {
-        name: 'dino8',
-        img: 'images/Dinos/Dino8.jpg',
-    },
-    {
-        name: 'dino1',
-        img: 'images/Dinos/Dino1.jpg',
-    },
-    {
-        name: 'dino2',
-        img: 'images/Dinos/Dino2.jpg',
-    },
-    {
-        name: 'dino3',
-        img: 'images/Dinos/Dino3.jpg',
-    },
-    {
-        name: 'dino4',
-        img: 'images/Dinos/Dino4.jpg',
-    },
-    {
-        name: 'dino5',
-        img: 'images/Dinos/Dino5.jpg',
-    },
-    {
-        name: 'dino6',
-        img: 'images/Dinos/Dino6.jpg',
-    },
-    {
-        name: 'dino7',
-        img: 'images/Dinos/Dino7.jpg',
-    },
-    {
-        name: 'dino8',
-        img: 'images/Dinos/Dino8.jpg',
-    }
-]
+
 cardArray.sort(() => 0.5 - Math.random());
 
 const gridDisplay = document.querySelector('#grid');

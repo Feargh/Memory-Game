@@ -49,6 +49,6 @@ button{
     height: 50px;
     width: 200px;
 }
-button.hover {
-    color: blue;
-}
+button:hover {
+    background-color: #e4cde5;
+  }

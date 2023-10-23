@@ -7,7 +7,7 @@ body {
     height: 300px;
     display: flex;
     flex-wrap: wrap;
-    margin: 0px auto;
+    margin: auto;
     cursor: pointer;
 }
 h3 {
